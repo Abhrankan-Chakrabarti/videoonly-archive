@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Encrypted Submissions | VideoOnly</title>
-
 <style>
 body {
     background:#0a0a0a;
@@ -17,7 +16,7 @@ a:hover { text-decoration:underline; }
 .box {
     border:1px solid #00ff41;
     padding:20px;
-    max-width:800px;
+    max-width:900px;
 }
 .footer {
     margin-top:40px;
@@ -26,13 +25,19 @@ a:hover { text-decoration:underline; }
 }
 code {
     background:#050505;
-    padding:6px 8px;
+    padding:4px 6px;
     display:inline-block;
-    word-break:break-all;
+}
+pre {
+    background:#050505;
+    padding:10px;
+    overflow-x:auto;
+}
+h3 {
+    margin-top:30px;
 }
 </style>
 </head>
-
 <body>
 
 <h2>Encrypted Submissions</h2>
@@ -49,15 +54,21 @@ If you wish to submit a confession or message, you must encrypt it
 using the public PGP key provided below.
 </p>
 
+<hr>
+
+<h3>Submission Email</h3>
+
+<p>
+Send encrypted messages to:
+</p>
+
+<p>
+<strong>videoonly.archive@protonmail.com</strong>
+</p>
+
+<hr>
+
 <h3>Public PGP Key</h3>
-
-<p>
-This public key belongs to:
-</p>
-
-<p>
-<code>videoonly.archive@protonmail.com</code>
-</p>
 
 <p>
 Download the public key:
@@ -65,54 +76,76 @@ Download the public key:
 
 <p>
 <a href="keys/videoonly_publickey.asc" download>
-Download Public PGP Key (.asc)
+keys/videoonly_publickey.asc
 </a>
 </p>
 
 <p>
-Public key fingerprint:
+Public key fingerprint (verify if possible):
 </p>
+
+<pre>
+32E6 303F DD0E 662B 5724 0609 8FFC B31F F14E B34D
+</pre>
+
+<hr>
+
+<h3>How to Encrypt a Message (Simple Guide)</h3>
 
 <p>
-<code>
-32e6 303f dd0e 662b 5724 0609 8ffc b31f f14e b34d
-</code>
+You do <strong>not</strong> need technical knowledge to encrypt a message.
+Once encrypted, only the owner of this site can read it.
 </p>
 
-<p>
-Always verify the fingerprint after downloading to ensure authenticity.
-</p>
-
-<h3>How to Submit</h3>
+<h4>Option 1: Android (Easiest)</h4>
 
 <ol>
-<li>Write your message locally (offline if possible).</li>
-<li>Encrypt the message using the public PGP key above.</li>
-<li>Send the encrypted message via email to <code>videoonly.archive@protonmail.com</code>.</li>
+<li>Install <strong>OpenKeychain</strong> from F-Droid or Play Store</li>
+<li>Download the public PGP key from the link above</li>
+<li>Open OpenKeychain → Import Key → select the downloaded key</li>
+<li>Write your message in any notes app</li>
+<li>Share or copy the text → choose <strong>Encrypt</strong></li>
+<li>Select the imported VideoOnly key</li>
+<li>Copy the encrypted text (it starts with <code>-----BEGIN PGP MESSAGE-----</code>)</li>
+<li>Email the encrypted text to the address above</li>
 </ol>
 
-<p>
-At present, encrypted email is the only supported submission method.
-</p>
+<h4>Option 2: Computer (Linux / macOS / Windows)</h4>
 
-<p>
-Messages sent without encryption may be ignored.
-</p>
+<ol>
+<li>Install a PGP tool:
+    <ul>
+        <li>Linux: GnuPG (usually preinstalled)</li>
+        <li>macOS: GPG Suite</li>
+        <li>Windows: Gpg4win</li>
+    </ul>
+</li>
+<li>Download the public PGP key from this page</li>
+<li>Import the key:
+<pre>
+gpg --import videoonly_publickey.asc
+</pre>
+</li>
+<li>Write your message in a text file (example: <code>message.txt</code>)</li>
+<li>Encrypt it:
+<pre>
+gpg --encrypt --armor --recipient videoonly.archive@protonmail.com message.txt
+</pre>
+</li>
+<li>A file named <code>message.txt.asc</code> will be created</li>
+<li>Open it and send its contents via email</li>
+</ol>
 
-<h3>Recommended Tools</h3>
-
-<ul>
-<li>GnuPG (Linux / macOS / Windows)</li>
-<li>OpenKeychain (Android)</li>
-<li>Any PGP-compatible encryption tool</li>
-</ul>
+<hr>
 
 <h3>Important Notes</h3>
 
 <ul>
-<li>Do not include personal identifiers unless you intend to.</li>
-<li>Assume published confessions may be edited for clarity.</li>
-<li>Not all submissions will be published.</li>
+<li>Only encrypted messages can be read</li>
+<li>Unencrypted messages may be ignored</li>
+<li>You may remain anonymous if you choose</li>
+<li>Anyone intercepting the message will see only scrambled text</li>
+<li>Not all submissions will be published</li>
 </ul>
 
 </div>
