@@ -2,108 +2,121 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Submit a Confession | VIDEOONLY</title>
+<title>Encrypted Submissions | VideoOnly</title>
+
 <style>
 body {
     background:#0a0a0a;
-    color:#d0d0d0;
+    color:#00ff41;
     font-family:'Courier New', monospace;
-    margin:0;
     padding:40px;
-}
-.container {
-    max-width:700px;
-    margin:auto;
-    border:1px solid #333;
-    padding:40px;
-}
-h2, h3 {
-    color:#ffffff;
-}
-a {
-    color:#d0d0d0;
-    text-decoration:none;
-}
-a:hover {
-    text-decoration:underline;
-}
-ul {
     line-height:1.7;
+}
+a { color:#00ff41; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.box {
+    border:1px solid #00ff41;
+    padding:20px;
+    max-width:800px;
 }
 .footer {
     margin-top:40px;
     font-size:0.8em;
     opacity:0.6;
 }
+code {
+    background:#050505;
+    padding:6px 8px;
+    display:inline-block;
+    word-break:break-all;
+}
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<h2>Encrypted Submissions</h2>
 
-<h2>Submit a Confession</h2>
+<div class="box">
 
 <p>
-VIDEOONLY accepts anonymous confessions submitted over the Tor network.
+This site does <strong>not</strong> accept direct or unencrypted submissions.
+There are no web forms, trackers, cookies, or client-side scripts.
 </p>
 
 <p>
-Submissions are reviewed manually.  
-There is no guarantee of publication.
+If you wish to submit a confession or message, you must encrypt it
+using the public PGP key provided below.
+</p>
+
+<h3>Public PGP Key</h3>
+
+<p>
+This public key belongs to:
+</p>
+
+<p>
+<code>videoonly.archive@protonmail.com</code>
+</p>
+
+<p>
+Download the public key:
+</p>
+
+<p>
+<a href="keys/videoonly_publickey.asc" download>
+Download Public PGP Key (.asc)
+</a>
+</p>
+
+<p>
+Public key fingerprint:
+</p>
+
+<p>
+<code>
+32e6 303f dd0e 662b 5724 0609 8ffc b31f f14e b34d
+</code>
+</p>
+
+<p>
+Always verify the fingerprint after downloading to ensure authenticity.
 </p>
 
 <h3>How to Submit</h3>
 
+<ol>
+<li>Write your message locally (offline if possible).</li>
+<li>Encrypt the message using the public PGP key above.</li>
+<li>Send the encrypted message via email or another Tor-friendly channel.</li>
+</ol>
+
 <p>
-Prepare your confession as plain text.
+Messages sent without encryption may be ignored.
 </p>
+
+<h3>Recommended Tools</h3>
 
 <ul>
-<li>Do not include real names, usernames, or locations</li>
-<li>Do not include identifying details about others</li>
-<li>Do not include threats or calls for harm</li>
-<li>Do not include instructions or admissions of illegal activity</li>
+<li>GnuPG (Linux / macOS / Windows)</li>
+<li>OpenKeychain (Android)</li>
+<li>Any PGP-compatible encryption tool</li>
 </ul>
 
-<h3>Where to Send</h3>
+<h3>Important Notes</h3>
 
-<p>
-Send your confession via Tor to:
-</p>
+<ul>
+<li>Do not include personal identifiers unless you intend to.</li>
+<li>Assume published confessions may be edited for clarity.</li>
+<li>Not all submissions will be published.</li>
+</ul>
 
-<p>
-<strong>videoonly.archive@protonmail.com</strong>
-</p>
-
-<p>
-PGP encryption is recommended but not required.
-</p>
-
-<p>
-If your submission is accepted, it may be lightly edited for clarity or safety before publication.
-</p>
-
-<h3>What Happens Next</h3>
-
-<p>
-All submissions are read privately.
-</p>
-
-<p>
-Rejected submissions are discarded and not stored.
-</p>
-
-<p>
-VIDEOONLY does not collect analytics, metadata, or identifying information.
-</p>
+</div>
 
 <p><a href="index.html">Back to Home</a></p>
 
 <div class="footer">
-<a href="guidelines.html">Submission Guidelines</a> ·
 <a href="disclaimer.html">Disclaimer</a>
-</div>
-
 </div>
 
 </body>
